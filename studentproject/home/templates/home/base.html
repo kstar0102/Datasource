@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}HomePage{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="text-center">
+     <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'homepage' %}">HomePage</a></li>
+          <li><a class="navbar-link" href="{% url 'student_show' %}">Student</a></li>
+          <li><a class="navbar-link" href="{% url 'registration-form' %}">Registration</a></li>
+          <li><a class="navbar-link" href="{% url 'subscribe' %}">Subscribe</a></li>
+          <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class="navbar-link" href="{% url 'otherpage' %}">Other</a></li>
+          <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+          <h1>DataFlair Django Tutorials</h1>
+{% block body_block %}
+<h1>Welcome to the Home-Page</h1>
+<h2> search for others/ </h2>
+<h2>we are in the block of home page</h2>
+{% endblock %}
+</body>
+</html>

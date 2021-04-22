@@ -1,0 +1,18 @@
+
+{% extends "home/base.html" %}
+{% block title %}Registration{% endblock %}
+{% block body_block %}
+    <pre><center>
+        <h1>Registration Form</h1>
+        <h3>DataFlair Django Tutorials</h3>
+        <h2>{{ html }}</h2>
+        <form action = '' method="post">
+            <!-- Very Important csrf Token -->
+            {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" name="register">
+    </form>
+    </center></pre>
+{% endblock %}

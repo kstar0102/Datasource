@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+{% block title %}Student_Show{% endblock %}
+{% block body_block %}
+   <h1>The Students Here at Dataflair</h1>
+    <div>
+        <ul>
+        {% for stud in student_list %}
+            <li>
+                <h2>Name {{ stud.name }}</h2>
+                <p> department {{ stud.department}}</p>
+                <p> class {{ stud.stud_class}}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
